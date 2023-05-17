@@ -9,7 +9,25 @@
     <Copyright>© Copyright 2023 Ninja Sha!4h.</Copyright>
     <Company>NinjaCorp Ltd.</Company>
     <RepositoryUrl>https://github.com/ninjarocks/Secure.SAML</RepositoryUrl>
+    <ApplicationIcon>ninja-icon-16.png</ApplicationIcon>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Secure.SAML</Title>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageIcon>ninja-icon-16.png</PackageIcon>
+    <Description>.Net Standard 2.1 library to generate SAML 2.0 as XMLDocument or Base64Encoded string.</Description>
+    <PackageTags>SAML; SAML Response; SHA1 SAML; SHA256 SAML; SHA512 SAML; SAML Assertion;</PackageTags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ninja-icon-16.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Users\najaf\Pictures\ninja-icon-16.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
   
   <ItemGroup>
     <PackageReference Include="System.Security.Cryptography.Xml" Version="7.0.1" />

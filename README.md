@@ -1,13 +1,16 @@
-# Secure.SAML
+# Secure.SAML 
+[![NuGet version](https://badge.fury.io/nu/Secure.SAML.svg)](https://badge.fury.io/nu/Secure.SAML) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/NinjaRocks/Secure.SAML/blob/master/License.md) [![CI](https://github.com/NinjaRocks/Secure.SAML/actions/workflows/CI-Build.yml/badge.svg)](https://github.com/NinjaRocks/Secure.SAML/actions/workflows/CI-Build.yml) [![GitHub Release](https://img.shields.io/github/v/release/ninjarocks/Secure.SAML?logo=github&sort=semver)](https://github.com/ninjarocks/Secure.SAML/releases/latest)
+[![CodeQL](https://github.com/NinjaRocks/Secure.SAML/actions/workflows/codeql.yml/badge.svg)](https://github.com/NinjaRocks/Secure.SAML/actions/workflows/codeql.yml) [![.Net Stardard](https://img.shields.io/badge/.Net%20Standard-2.1-blue)](https://dotnet.microsoft.com/en-us/download/dotnet/2.1)
 
-This library provides utility SAML class to generate SAML 2.0 as XMLDocument & base64 encoded string for parameters specified below-
+This library provides an utility to generate SAML 2.0 as XMLDocument & base64 encoded string for parameters specified below-
 
-- `key="recipient"` is Recipient or Consumer URL
-- `key="issuer"` is string Issuer Name or domain
-- `key="audienceRestrictions"` is a (name/value) dictonary for Audience Restrictions
-- `key="userIdentity"` is string user Identity or subject
-- `key="customAttributes"` is a (name/value) dictonary for custom attributes to pass
-- `key="signatureType"` is string whether to sign Response or Assertion.
+- `key="Recipient"` is Recipient or Consumer URL
+- `key="Issuer"` is value for Issuer Name or domain
+- `key="AudienceRestrictions"` is (name/value) dictionary for Audience Restrictions
+- `key="NamedId"` is value representing the user Identity or subject
+- `key="CustomAttributes"` is (name/value) dictionary for custom attributes to pass to recipient.
+- `key="SignatureType"` is whether to sign Response or Assertion.
+- `key="signingAlgorithm"` supports SHA1, SHA256 and SHA512 algorithms.
 
 ```csharp
 var saml = new SAML(Func<X509Certificate2> certificateFactory);
@@ -19,7 +22,10 @@ var parameters = new Parameters
   AudienceRestrictions = new[] { "xyz.target-link.co.uk" },
   NamedId = "NIN0123456",
   NameIdFormat = NameIdFormat.Unspecified,                           // Default - Unspecified
-  Attributes = new Dictionary<string, string> { { "Custom_key", "value" } },
+  Attributes = new Dictionary<string, string>                        // Optional, Custom payload to recipient.
+  {
+    { "Custom_key", "value" }
+  },
   SignatureType = SignType.Response,                                 // Default - Response
   NotOnOrAfterInMins = 10,                                           // Default - 10 minutes
   SigningAlgorithm = SigningAlgorithm.SHA512,                        // Supports - SHA1, SHA256 & SHA512 (default).
