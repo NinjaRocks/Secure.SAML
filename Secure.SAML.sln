@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D047FF60-348A-4B0A-A483-461AAA040849}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{53E3DDFE-B280-4C80-A7D2-B5180C003631}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Secure.SAML", "src\Secure.SAML\Secure.SAML.csproj", "{90FDD931-3EE4-4FA3-BA88-E1EF4D44667D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{86F8BD8E-5D4C-4350-925E-D42A4454586F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Secure.SAML.Tests", "tests\Secure.SAML.Tests\Secure.SAML.Tests.csproj", "{C46D3368-D47C-4DCC-8EAD-4A2EC8C18133}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Github", ".Github", "{93165197-BEBC-468F-8472-CEA4AC0936AF}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\CI-Build.yml = .github\workflows\CI-Build.yml
+		.github\workflows\codeql.yml = .github\workflows\codeql.yml
+		.github\gitversion.yml = .github\gitversion.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90FDD931-3EE4-4FA3-BA88-E1EF4D44667D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90FDD931-3EE4-4FA3-BA88-E1EF4D44667D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90FDD931-3EE4-4FA3-BA88-E1EF4D44667D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90FDD931-3EE4-4FA3-BA88-E1EF4D44667D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C46D3368-D47C-4DCC-8EAD-4A2EC8C18133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C46D3368-D47C-4DCC-8EAD-4A2EC8C18133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C46D3368-D47C-4DCC-8EAD-4A2EC8C18133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C46D3368-D47C-4DCC-8EAD-4A2EC8C18133}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90FDD931-3EE4-4FA3-BA88-E1EF4D44667D} = {53E3DDFE-B280-4C80-A7D2-B5180C003631}
+		{C46D3368-D47C-4DCC-8EAD-4A2EC8C18133} = {86F8BD8E-5D4C-4350-925E-D42A4454586F}
+		{93165197-BEBC-468F-8472-CEA4AC0936AF} = {D047FF60-348A-4B0A-A483-461AAA040849}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44E7DE29-DD15-4951-B940-BA0C269974AF}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyTitle>Secure.SAML</AssemblyTitle>
+    <RepositoryUrl>https://github.com/ninjarocks/Secure.SAML</RepositoryUrl>
+    <Product>Secure.SAML</Product>
+    <Copyright>© Copyright 2023 Ninja Sha!4h.</Copyright>
+    <Company>NinjaCorp Ltd.</Company>
+    <RepositoryUrl>https://github.com/ninjarocks/Secure.SAML</RepositoryUrl>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="System.Security.Cryptography.Xml" Version="7.0.1" />
+  </ItemGroup>
+
+
+</Project>
