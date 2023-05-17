@@ -5,8 +5,8 @@
     <OutputType>Library</OutputType>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GeneratedAssemblyInfoFile>AssemblyInfo.cs</GeneratedAssemblyInfoFile>
     <PackRelease>true</PackRelease>
     <IsPackable>true</IsPackable>
@@ -21,15 +21,17 @@
     <Description>.Net Standard 2.1 library to generate SAML 2.0 as XMLDocument or Base64Encoded string.</Description>
     <PackageTags>SAML; SAML Response; SHA1 SAML; SHA256 SAML; SHA512 SAML; SAML Assertion;</PackageTags>
     <AssemblyVersion>1.0.1</AssemblyVersion>
+    <Version>1.0.1</Version>
     <PackageIcon>ninja-icon-16.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>GIT</RepositoryType>
-    <PackageReleaseNotes>Release Notes
-SAML utility to create SAML 2.0 Response
+    <PackageReleaseNotes>Release Notes : SAML utility to create SAML 2.0 Response
 * Supported Signing Algorithms - SHA1, SHA256, SHA512
-* Sign Assertion or Response.
-* Output Base64string or XMLDocument.</PackageReleaseNotes>
+* Signs Assertion or Response.
+* Outputs Base64string or XMLDocument.</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <FileVersion>1.0.1.0</FileVersion>
+    <PackAsTool>False</PackAsTool>
   </PropertyGroup>
 
   <ItemGroup>
@@ -56,6 +58,7 @@ SAML utility to create SAML 2.0 Response
   </ItemGroup>  
   <ItemGroup>
     <PackageReference Include="System.Security.Cryptography.Xml" Version="7.0.1" />
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.1.227" />
   </ItemGroup>
 
 
