@@ -20,8 +20,8 @@ jobs:
         uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: false
+          FILTER_REGEX_EXCLUDE: .*src/Secure.SAML/v2/Xsds/.*
           FILTER_REGEX_INCLUDE: .*src/.*
-          FILTER_REGEX_EXCLUDE: .*src/.xsd
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: '${{ env.github-token }}'
   Build-Beta:
