@@ -6,7 +6,7 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
     <GeneratedAssemblyInfoFile>AssemblyInfo.cs</GeneratedAssemblyInfoFile>
     <PackRelease>true</PackRelease>
     <IsPackable>true</IsPackable>
@@ -22,9 +22,21 @@
     <PackageTags>SAML; SAML Response; SHA1 SAML; SHA256 SAML; SHA512 SAML; SAML Assertion;</PackageTags>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <PackageIcon>ninja-icon-16.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageReleaseNotes>Release Notes
+SAML utility to create SAML 2.0 Response
+* Supported Signing Algorithms - SHA1, SHA256, SHA512
+* Sign Assertion or Response.
+* Output Base64string or XMLDocument.</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="..\..\ninja-icon-16.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -34,6 +46,10 @@
   
 <ItemGroup>
     <None Include="..\..\..\..\..\Users\najaf\Pictures\ninja-icon-16.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
