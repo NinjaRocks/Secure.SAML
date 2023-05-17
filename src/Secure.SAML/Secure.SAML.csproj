@@ -20,7 +20,7 @@
     <PackageProjectUrl></PackageProjectUrl>
     <Description>.Net Standard 2.1 library to generate SAML 2.0 as XMLDocument or Base64Encoded string.</Description>
     <PackageTags>SAML; SAML Response; SHA1 SAML; SHA256 SAML; SHA512 SAML; SAML Assertion;</PackageTags>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
     <PackageIcon>ninja-icon-16.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>GIT</RepositoryType>
