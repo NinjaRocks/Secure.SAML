@@ -24,7 +24,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Github", ".Github", "{9316
 		.github\workflows\CI-Build.yml = .github\workflows\CI-Build.yml
 		.github\workflows\codeql.yml = .github\workflows\codeql.yml
 		.github\gitversion.yml = .github\gitversion.yml
-		.github\workflows\Release-Nuget.yml = .github\workflows\Release-Nuget.yml
 	EndProjectSection
 EndProject
 Global
