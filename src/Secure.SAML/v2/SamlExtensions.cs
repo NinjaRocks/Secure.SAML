@@ -19,10 +19,13 @@ namespace Secure.SAML.v2
             {
                 case NameIdFormat.EmailAddress:
                     return "urn:oasis:names:tc:SAML:2.0:nameid-format:emailAddress";
+
                 case NameIdFormat.Transient:
                     return "urn:oasis:names:tc:SAML:2.0:nameid-format:transient";
+
                 case NameIdFormat.Persistent:
                     return "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent";
+
                 default:
                     return "urn:oasis:names:tc:SAML:2.0:nameid-format:unspecified";
             }

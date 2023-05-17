@@ -23,25 +23,23 @@ namespace Secure.SAML.Signing
 
             // Set canonical method to Exclusive Canonical XML.
             signedXml.SignedInfo.CanonicalizationMethod = SignedXml.XmlDsigExcC14NTransformUrl;
-            
+
             // Set signature method to signed XML.
             signedXml.SignedInfo.SignatureMethod = SigningAlgorithm.SignatureMethod;
 
-            // Create a reference to be signed. 
+            // Create a reference to be signed.
             var reference = new Reference { Uri = "#" + referenceValue };
 
-                  
-            // Add an enveloped transformation to the reference. 
+            // Add an enveloped transformation to the reference.
             SigningAlgorithm.AddTransforms(reference);
 
             // Set digest method of reference to be signed.
             reference.DigestMethod = SigningAlgorithm.DigestMethod;
 
-
-            // Add the reference to the SignedXml object. 
+            // Add the reference to the SignedXml object.
             signedXml.AddReference(reference);
 
-            // Add an RSAKeyValue KeyInfo (optional; helps recipient find key to validate). 
+            // Add an RSAKeyValue KeyInfo (optional; helps recipient find key to validate).
             var keyInfo = new KeyInfo();
             var keyData = new KeyInfoX509Data(certificate);
 
@@ -49,10 +47,10 @@ namespace Secure.SAML.Signing
 
             signedXml.KeyInfo = keyInfo;
 
-            // Compute the signature. 
+            // Compute the signature.
             signedXml.ComputeSignature();
 
-            // Get the XML representation of the signature and save it to an XmlElement object. 
+            // Get the XML representation of the signature and save it to an XmlElement object.
             var xmlDigitalSignature = signedXml.GetXml();
 
             return xmlDigitalSignature;

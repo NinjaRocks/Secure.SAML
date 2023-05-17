@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Secure.SAML.Tests
@@ -8,12 +8,13 @@ namespace Secure.SAML.Tests
     {
         public static X509Certificate2 GetCertificate()
         {
-            var signedStream = typeof (Helper)
+            var signedStream = typeof(Helper)
                 .Assembly.GetManifestResourceStream("Secure.SAML.Tests.SelfSignedKey.pfx");
             var signingCertRawData = new byte[signedStream.Length];
-            signedStream.Read(signingCertRawData, 0, (int) signedStream.Length);
+            signedStream.Read(signingCertRawData, 0, (int)signedStream.Length);
             return new X509Certificate2(signingCertRawData, "password", X509KeyStorageFlags.Exportable);
         }
+
         public static Parameters GetParameters(SigningAlgorithm algorithm) => new Parameters
         (
                     issuer: "http://ninjacorp.com",

@@ -1,6 +1,6 @@
-using Secure.SAML.v2;
-using NUnit.Framework;
 using System;
+using NUnit.Framework;
+using Secure.SAML.v2;
 
 namespace Secure.SAML.Tests
 {
@@ -13,7 +13,6 @@ namespace Secure.SAML.Tests
             var date = DateTime.Parse("2018-02-27T09:36:44.0665619Z");
             var dateTime = date.ToSamlFormat();
             Assert.That(dateTime, Is.EqualTo("2018-02-27T09:36:44Z"));
-
         }
 
         [TestCase(NameIdFormat.EmailAddress, "urn:oasis:names:tc:SAML:2.0:nameid-format:emailAddress")]
@@ -25,10 +24,10 @@ namespace Secure.SAML.Tests
             var samlUrn = nameIdFormat.ToSamlString();
             Assert.That(samlUrn, Is.EqualTo(urn));
         }
+
         [Test]
         public void TestToSamlXMLExtensionForCorrectNamespaces()
         {
-
             var samlResponse = new ResponseType();
             var samlXml = samlResponse.ToSamlXML();
 
