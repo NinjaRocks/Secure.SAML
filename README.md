@@ -1,4 +1,4 @@
-# Secure.SAML 
+# Secure.SAML ![alt text](../ninja-icon-16.png)
 [![NuGet version](https://badge.fury.io/nu/Secure.SAML.svg)](https://badge.fury.io/nu/Secure.SAML) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/NinjaRocks/Secure.SAML/blob/master/License.md) [![CI](https://github.com/NinjaRocks/Secure.SAML/actions/workflows/CI-Build.yml/badge.svg)](https://github.com/NinjaRocks/Secure.SAML/actions/workflows/CI-Build.yml) [![GitHub Release](https://img.shields.io/github/v/release/ninjarocks/Secure.SAML?logo=github&sort=semver)](https://github.com/ninjarocks/Secure.SAML/releases/latest)
 [![CodeQL](https://github.com/NinjaRocks/Secure.SAML/actions/workflows/codeql.yml/badge.svg)](https://github.com/NinjaRocks/Secure.SAML/actions/workflows/codeql.yml) [![.Net Stardard](https://img.shields.io/badge/.Net%20Standard-2.1-blue)](https://dotnet.microsoft.com/en-us/download/dotnet/2.1)
 
