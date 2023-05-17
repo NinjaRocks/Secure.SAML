@@ -5,9 +5,9 @@ namespace Secure.SAML.Signing
 {
     internal class Sha512SigningAlgorithm : ISigningAlgorithm
     {
-        public string CanonicalizationMethod { get; } = "http://www.w3.org/2001/10/xml-exc-c14n#";
-        public string SignatureMethod { get; } = "http://www.w3.org/2001/04/xmldsig-more#rsa-sha512";
-        public string DigestMethod { get; } = "http://www.w3.org/2001/04/xmlenc#sha512";
+        public string CanonicalizationMethod { get; } = SignedXml.XmlDsigExcC14NTransformUrl;
+        public string SignatureMethod { get; } = SignedXml.XmlDsigRSASHA512Url;
+        public string DigestMethod { get; } = SignedXml.XmlDsigSHA512Url;
 
         public void AddTransforms(Reference reference)
         {
