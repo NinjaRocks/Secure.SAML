@@ -12,7 +12,7 @@ namespace Secure.SAML.Tests
         public void TestSamlSignerWithGivenAlgorithm(SigningAlgorithm signingAlgorithm)
 
         {
-            var response = new v2.SAML(Helper.GetCertificate).Create(Helper.GetParameters(signingAlgorithm));            
+            var response = new v2.SAML(Helper.GetCertificate).Create(Helper.GetParameters(signingAlgorithm));
             Assert.That(SamlSigner.VerifySignature(response.OuterXml, Helper.GetCertificate()));
         }
     }

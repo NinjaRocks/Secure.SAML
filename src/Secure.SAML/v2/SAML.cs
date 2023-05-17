@@ -21,6 +21,7 @@ namespace Secure.SAML.v2
         {
             this.samlSignerFactory = samlSignerFactory;
         }
+
         /// <summary>
         /// Creates Base64 encoded SAML Response.
         /// </summary>
@@ -34,7 +35,6 @@ namespace Secure.SAML.v2
             return encoded;
         }
 
-        
         /// <summary>
         /// Creates a SAML Response.
         /// </summary>

@@ -24,14 +24,13 @@ namespace Secure.SAML.Tests
 
             var xmlDsigExcC14NTransform = (XmlDsigExcC14NTransform)reference.TransformChain[1];
             Assert.That(xmlDsigExcC14NTransform.InclusiveNamespacesPrefixList, Is.EqualTo("#default saml ds xs xsi"));
-
         }
 
         [Test]
         public void TestAddTransformsForNullArgumentToThrowException()
         {
             var encryptionMethod = new Signing.Sha256SigningAlgorithm();
-            Assert.Throws<ArgumentException>(()=> encryptionMethod.AddTransforms(null));
+            Assert.Throws<ArgumentException>(() => encryptionMethod.AddTransforms(null));
         }
     }
 }

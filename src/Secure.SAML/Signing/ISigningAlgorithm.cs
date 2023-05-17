@@ -7,6 +7,7 @@ namespace Secure.SAML.Signing
         string CanonicalizationMethod { get; }
         string SignatureMethod { get; }
         string DigestMethod { get; }
+
         void AddTransforms(Reference reference);
     }
 }
