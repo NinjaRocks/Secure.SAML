@@ -146,30 +146,8 @@ jobs:
 
       - name: Step-03 Publish to Github Packages
         run: find -name "*.nupkg" -print -exec gpr push -k ${{env.github-token}} {} \;
-  Release:
-    needs: [Package-Artifacts]
-    if: startsWith(github.ref, 'refs/tags/release/')
-    runs-on: ubuntu-latest
-    env:
-      nuget-token: '${{ secrets.NUGET_API_KEY }}'      
-      working-directory: /home/runner/work/Secure.SAML/Secure.SAML
-    steps:
-      - name: Step-01 Retrieve Build Artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: build-artifact
-          path: ${{env.working-directory}}
 
-      - name: Step-02 Create Github Release
-        run: |
-            curl \
-            -X POST \
-            -H "Accept:application/vnd.github+json" \
-            -H "Authorization:token ${{ secrets.GITHUB_TOKEN }}" \
-            https://api.github.com/ninjarocks/Secure.SAML/releases \
-            -d '{"tag_name":v${{ needs.Package-Artifacts.outputs.semVersion }},"target_commitish":"master","name":"Secure.SAML","body":"Relese version ${{ needs.Package.outputs.semVersion }}","draft":false,"prerelease":false,"generate_release_notes":false}'
-
-      - name: Step-03 Publish to Nuget Org
-        run: dotnet nuget push ${{env.working-directory}}/src/Secure.SAML/bin/Release/*.nupkg --skip-duplicate --api-key ${{ env.nuget-token }} --source https://api.nuget.org/v3/index.json
-
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${github.head_ref}
      
