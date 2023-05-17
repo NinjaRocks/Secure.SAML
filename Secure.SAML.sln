@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D047FF60-348A-4B0A-A483-461AAA040849}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		GitVersion.yml = GitVersion.yml
 		LICENSE = LICENSE
 		ninja-icon-16.png = ninja-icon-16.png
 		README.md = README.md
@@ -22,8 +23,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Github", ".Github", "{93165197-BEBC-468F-8472-CEA4AC0936AF}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\CI-Build.yml = .github\workflows\CI-Build.yml
-		.github\workflows\codeql.yml = .github\workflows\codeql.yml
-		.github\gitversion.yml = .github\gitversion.yml
+		.github\workflows\CodeQL.yml = .github\workflows\CodeQL.yml
 	EndProjectSection
 EndProject
 Global
