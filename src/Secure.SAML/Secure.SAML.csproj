@@ -18,10 +18,10 @@
     <RepositoryUrl>https://github.com/ninjarocks/Secure.SAML</RepositoryUrl>
     <Title>Secure.SAML</Title>
     <PackageProjectUrl></PackageProjectUrl>
-    <Description>.Net Standard 2.1 library to generate SAML 2.0 as XMLDocument or Base64Encoded string.</Description>
+    <Description>.Net library to generate signed SAML 2.0 Response.</Description>
     <PackageTags>SAML; SAML Response; SHA1 SAML; SHA256 SAML; SHA512 SAML; SAML Assertion;</PackageTags>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.5</AssemblyVersion>
+    <Version>1.0.5</Version>
     <PackageIcon>ninja-icon-16.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>GIT</RepositoryType>
@@ -30,7 +30,7 @@
 * Signs Assertion or Response.
 * Outputs Base64string or XMLDocument.</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <FileVersion>1.0.1.0</FileVersion>
+    <FileVersion>1.0.5</FileVersion>
     <PackAsTool>False</PackAsTool>
   </PropertyGroup>
 
